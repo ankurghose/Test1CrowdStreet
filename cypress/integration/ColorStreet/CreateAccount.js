@@ -22,9 +22,18 @@ cy.get('#Customer_Email').type('qademo@gmail.com')
 cy.get('#Customer_LoginName').type('qademo')
 cy.get('#Password').type('Password1!')
 cy.get('#ConfirmPassword').type('Password1!')
+cy.get('iframe')
+.first()
+.its('0.contentDocument.body')
+.should('not.be.undefined')
+.and('not.be.empty')
+.then(cy.wrap)
+.find('#recaptcha-anchor')
+.should('be.visible')
+.click();
 cy.get('[style="width: 304px; height: 78px;"] > div > iframe').click()
-
-cy.get('#submit').click()
+cy.wait(500)
+//cy.get('#submit').click()
 
 
 
