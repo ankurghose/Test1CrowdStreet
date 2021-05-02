@@ -33,7 +33,7 @@ cy.get('iframe')
 .click();
 cy.get('[style="width: 304px; height: 78px;"] > div > iframe').click()
 cy.wait(500)
-//cy.get('#submit').click()
+cy.get('#submit').click()
 
 
 
