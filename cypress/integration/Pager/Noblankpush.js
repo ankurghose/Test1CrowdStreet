@@ -9,7 +9,7 @@ it('Verify user can type in the chat box', function(){
     cy.get('.messages > div').should('contain.text','There no message please start a conversation')
     cy.get('input').click()
     cy.get('.btn-send').click()
-    
+    //No new message is added
 
 
 
